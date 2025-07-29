@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/b71393ca81.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <!-- <div class="circle">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div> -->
+        </nav>
+
+        <img src="" alt="singer" class="song-img" />
+
+        <h1 id="song-name"></h1>
+        <p id="artist-name"></p>
+
+        <audio id="song"></audio>
+
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div id="prev"><i class="fa-solid fa-backward"></i></div>
+          <div onclick="playPause()">
+            <i class="fa-solid fa-play" id="ctrlIcon"></i>
+          </div>
+          <div id="next"><i class="fa-solid fa-forward"></i></div>
+        </div>
+
+        <div class="options">
+          <div id="repeat"><i class="fa-solid fa-repeat"></i></div>
+        </div>
+
+        <div class="time">
+          <span id="currentTime">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./songs.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
